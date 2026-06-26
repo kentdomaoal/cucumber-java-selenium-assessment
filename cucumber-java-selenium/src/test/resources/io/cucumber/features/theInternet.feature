@@ -20,6 +20,7 @@ Feature: The Internet
     When the 'Sortable Data Tables' example is opened
     And the 'Example 1' table header is displayed
     Then the 'Example 1' table should display the following records:
+      | Last Name | First Name | Email                 | Due     | Web Site                 |
       | Smith     | John       | jsmith@gmail.com      | $50.00  | http://www.jsmith.com    |
       | Bach      | Frank      | fbach@yahoo.com       | $51.00  | http://www.frank.com     |
       | Doe       | Jason      | jdoe@hotmail.com      | $100.00 | http://www.jdoe.com      |

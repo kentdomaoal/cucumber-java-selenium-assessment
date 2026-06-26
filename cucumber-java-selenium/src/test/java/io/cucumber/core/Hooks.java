@@ -7,6 +7,7 @@ import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
 import java.util.logging.Level;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.logging.LogType;
@@ -25,6 +26,7 @@ public class Hooks extends Context {
     logPrefs.enable(LogType.BROWSER, Level.ALL);
     options.addArguments("start-maximized");
     options.setCapability(ChromeOptions.LOGGING_PREFS, logPrefs);
+    options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
     manager.setDriver(new ChromeDriver(options));
     System.out.println("Made driver");
   }
