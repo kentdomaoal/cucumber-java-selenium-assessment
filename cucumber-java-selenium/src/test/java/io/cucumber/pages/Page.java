@@ -19,7 +19,8 @@ public class Page {
   public Page(ChromeDriver driver) {
     this.driver = driver;
     PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(5)), this);
-    waitForPageLoad();
+    // Commented this and used PageLoadStrategy instead;
+    //waitForPageLoad();
   }
 
   public void waitForPageLoad() {
@@ -30,6 +31,9 @@ public class Page {
     }
   }
 
+  /**
+   * Helper methods to incorporate explicit waits when getting the elements.
+   */
   public WebElement getElement(WebElement element){
       return new WebDriverWait(driver, TIMEOUT)
               .until(ExpectedConditions.visibilityOf(element));
