@@ -15,7 +15,7 @@
         <io.appium.version>10.1.1</io.appium.version>
         <junit.version>6.1.0</junit.version>
         <cucumber.version>7.34.3</cucumber.version>
-        <cucumber.picocontainer.version>7.34.3</cucumber.picocontainer.version>
+        <cucumber.picocontainer.version>7.34.4</cucumber.picocontainer.version>
     </properties>
 
     <dependencyManagement>
